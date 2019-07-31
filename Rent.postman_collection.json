@@ -1,0 +1,832 @@
+{
+	"info": {
+		"_postman_id": "f46b19bf-f91b-479c-80f0-fc3974c3c618",
+		"name": "Rent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "City",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{cities}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cities}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "City/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{cities}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cities}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "City",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{cities}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cities}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "City",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"name\" : \"Porec\",\n\t\"zip\" : \"44600\",\n\t\"id\" : 16\n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{cities}}/16",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cities}}",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "City/id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\"op\" : \"replace\",\n\t\"path\" : \"/isDeleted\",\n\t\"value\" : true\n\t}\n]"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{cities}}/3",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cities}}",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "City",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{cities}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cities}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstname\" : \"Jakov\",\n\t\"lastname\" : \"Jaković\",\n\t\"dateofbirth\" : \"1990-09-09\",\n\t\"drivingLicenceNumber\" : \"10101010\"\n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{customers}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{customers}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{customers}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{customers}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{customers}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{customers}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"firstname\" : \"Jakov\",\n\t\"lastname\" : \"Jaković\",\n\t\"dateofbirth\" : \"1990-09-09\",\n\t\"drivingLicenceNumber\" : \"10101015\",\n\t\"id\" : 11\n}\n"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{customers}}/11",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{customers}}",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer/id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\"op\" : \"replace\",\n\t\"path\" : \"/isDeleted\",\n\t\"value\" : true\n\t}\n]"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{cities}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cities}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomersId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{cities}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cities}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Citroen\",\r\n    \"model\": \"c5\",\r\n    \"productionYear\": 2010,\r\n    \"mileage\": 105000,\r\n    \"color\": \"Black\",\r\n    \"carCategoryId\": 4\r\n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{cars}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cars}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cars/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{cars}}/9",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cars}}",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{cars}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cars}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cars",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Citroen\",\r\n    \"model\": \"C5\",\r\n    \"productionYear\": 2010,\r\n    \"mileage\": 10500,\r\n    \"color\": \"Blue\",\r\n    \"carCategoryId\": 4,\r\n    \"id\": 8,\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{cars}}/8",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cars}}",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Car/id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\"op\" : \"replace\",\n\t\"path\" : \"/isDeleted\",\n\t\"value\" : true\n\t}\n]"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{cars}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cars}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarsId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{cars}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{cars}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rentals",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"startdate\" : \"2018-07-29\",\n\t\t\"enddate\" : \"2018-09-01\",\n        \"remarks\": \"blah blah\",\n        \"pickUpLocationId\": 2,\n        \"dropOffLocationId\": 3,\n        \"customerId\": 3,\n        \"carId\": 1,\n        \"reserved\": true,\n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{rentals}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{rentals}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rentals/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{rentals}}/8",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{rentals}}",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rentals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{rentals}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{rentals}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rentals",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"startDate\": \"2015-04-04T00:00:00\",\n        \"endDate\": \"2015-05-04T00:00:00\",\n        \"remarks\": \"blah blah\",\n        \"pickUpLocationId\": 2,\n        \"dropOffLocationId\": 3,\n        \"customerId\": 3,\n        \"carId\": 5,\n        \"reserved\": true,\n        \"id\": 1\n       \n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{rentals}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{rentals}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rental/id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\"op\" : \"replace\",\n\t\"path\" : \"/isDeleted\",\n\t\"value\" : true\n\t}\n]"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{rentals}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{rentals}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rentals",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{rentals}}/8",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{rentals}}",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarCategories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Traktor\"\n\t\n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{carCategories}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{carCategories}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarCategories/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{carCategories}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{carCategories}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{carCategories}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{carCategories}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarCategories",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Traktorcina\",\n\t\"id\" : 7\n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{carCategories}}/7",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{carCategories}}",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarCategory/id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\"op\" : \"replace\",\n\t\"path\" : \"/isDeleted\",\n\t\"value\" : true\n\t}\n]"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{carCategories}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{carCategories}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarCategories",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{carCategories}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{carCategories}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Locations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Jakova 56\",\n\t\"cityId\" : 3\n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{locations}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{locations}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Locations/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{locations}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{locations}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Locations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{locations}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{locations}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Locations",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Vukovarska 4ccc\",\r\n    \"cityId\": 1,\r\n    \"id\": 1\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{locations}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{locations}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Location/id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\"op\" : \"replace\",\n\t\"path\" : \"/isDeleted\",\n\t\"value\" : true\n\t}\n]"
+				},
+				"url": {
+					"raw": "{{rootUrl}}/{{locations}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{locations}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Locations",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/{{locations}}/1",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"{{locations}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
