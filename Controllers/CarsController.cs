@@ -23,7 +23,7 @@ namespace CarRentalApp.Controllers
          [HttpGet]
         public async Task<ActionResult<IEnumerable<Car>>> GetCars()
         {
-            var cars = await _repo.Get();
+            var cars = await _repo.GetCars();
 
             if (cars == null)
                 return NotFound();
@@ -34,7 +34,7 @@ namespace CarRentalApp.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Car>> GetCar(int id)
         {
-            var car = await _repo.GetById(id);
+            var car = await _repo.GetCarById(id);
 
             if (car == null)
                 return NotFound();
@@ -79,12 +79,11 @@ namespace CarRentalApp.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Car>> DeleteCar(int id)
         {
-            var car = await _repo.GetById(id);
+            var car = _repo.GetCarById(id);
 
             if (car == null)
                 return NotFound();
-
-            _repo.Remove(car);
+            
             await _repo.Save();
 
             return NoContent();

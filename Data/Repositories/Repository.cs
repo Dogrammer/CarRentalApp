@@ -4,10 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.JsonPatch;
 using CarRentalApp.Models;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CarRentalApp.Data.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : BaseModel
+    public class Repository<T> : IRepository<T> where T : class
     {
 
         private readonly CarRentalContext _context;
@@ -39,7 +40,7 @@ namespace CarRentalApp.Data.Repositories
         {
             // var item = _context.Set<T>().Find(id);
 
-             _context.Set<T>().Remove(entity);
+              _context.Set<T>().Remove(entity);
         }
 
         public async Task Save()
@@ -69,7 +70,67 @@ namespace CarRentalApp.Data.Repositories
             
         }
 
+        public async Task<IEnumerable<Rental>> GetRentals()
+        {
+            var rentals = await _context
+                .Rentals
+                .Include(c => c.Car).ThenInclude(c => c.CarCategory)
+                .Include(c => c.Customer)
+                .Include(p => p.PickUpLocation)
+                .Include(d => d.DropOffLocation)
+                .ToListAsync();
+
+            return rentals;
+        }
         
+
+        public async Task<IEnumerable<Car>> GetCars()
+        {
+            var cars = await _context.Cars.Include(c => c.CarCategory).ToListAsync();
+
+            return cars;
+        }
+
+        public async Task<Car> GetCarById(int id)
+        {
+            var car = await _context.Cars
+                .Include(c => c.CarCategory)
+                .FirstOrDefaultAsync(x => x.Id == id);
+            
+            return car;
+        }
+
+        public async Task<IEnumerable<Location>> GetLocations()
+        {
+            var locations = await _context.Locations.Include(c => c.City)
+                                                    .ToListAsync();
+
+            return locations;
+        }
+
+        public async Task<Location> GetLocationById(int id)
+        {
+            var location = await _context.Locations
+                .Include(c => c.City)
+                .FirstOrDefaultAsync(x => x.Id == id);
+            
+            return location;
+        }
+
+        public async Task<Rental> GetRentalById(int id)
+        {
+            var rental = await _context.Rentals
+                .Include(l => l.PickUpLocation)
+                .Include(d => d.DropOffLocation)
+                .Include(c => c.Customer)
+                .Include(r => r.Car)
+                .FirstOrDefaultAsync(x => x.Id == id);
+            
+            return rental;
+        }
+
+        
+       
 
         
     }

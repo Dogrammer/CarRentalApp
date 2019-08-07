@@ -38,7 +38,7 @@ namespace CarRentalApp.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Location>>> GetRentals()
         {
-            var rentals = await _repo.Get();
+            var rentals = await _repo.GetRentals();
             if (rentals == null)
                 return NotFound();
 
@@ -48,7 +48,7 @@ namespace CarRentalApp.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Rental>> GetRental(int id)
         {
-            var rental = await _repo.GetById(id);
+            var rental = await _repo.GetRentalById(id);
 
             if (rental == null)
                 return NotFound();
@@ -97,18 +97,16 @@ namespace CarRentalApp.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteRental(int id)
+        public async Task<ActionResult<Rental>> DeleteRental(int id)
         {
-            var rental = await _repo.GetById(id);
+            var rental = await _repo.GetRentalById(id);
 
-            if (rental == null)
-                return NotFound();
+            if(rental == null)
+                return NotFound("rental not found");
 
-            _repo.Remove(rental);
             await _repo.Save();
 
             return NoContent();
-
         }
         // private readonly CarRentalContext _context;
         // public RentalsController(CarRentalContext context)

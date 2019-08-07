@@ -42,6 +42,7 @@ namespace CarRentalApp
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IRentalService, RentalService>();
+            services.AddCors();
         }
 
 
@@ -59,6 +60,7 @@ namespace CarRentalApp
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }

@@ -77,7 +77,7 @@ namespace CarRentalApp.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteCustomer(int id)
+        public async Task<ActionResult<Customer>> DeleteCustomer(int id)
         {
             var customer = await _repo.GetById(id);
 

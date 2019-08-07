@@ -20,7 +20,7 @@ namespace CarRentalApp.Models
         public int Mileage { get; set; }
         
         public string Color { get; set; }
-        [JsonIgnore]
+        //[JsonIgnore]
         public CarCategory CarCategory { get; set; }
         
         [Required(ErrorMessage="CarCategory je obvezno polje."), Range(1,int.MaxValue, ErrorMessage = "Strani Ključ ne može biti negativan.")]

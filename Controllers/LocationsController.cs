@@ -12,24 +12,18 @@ namespace CarRentalApp.Controllers
     [ApiController]
     public class LocationsController : ControllerBase
     {
+       
         private readonly IRepository<Location> _repo;
 
         public LocationsController(IRepository<Location> repo)
         {
             _repo = repo;
-
-        }
-
-        private readonly CarRentalContext _context;
-        public LocationsController(CarRentalContext context)
-        {
-            _context = context;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Location>>> GetLocations()
         {
-            var locations = await _repo.Get();
+            var locations = await _repo.GetLocations();
             if (locations == null)
                 return NotFound();
 
@@ -39,7 +33,7 @@ namespace CarRentalApp.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Location>> GetLocation(int id)
         {
-            var location =await _repo.GetById(id);
+            var location = await _repo.GetLocationById(id);
 
             if (location == null)
                 return NotFound();
@@ -55,16 +49,16 @@ namespace CarRentalApp.Controllers
             await _repo.Save();
 
             return CreatedAtAction(nameof(GetLocations), new { id = location.Id }, location);
-        
+
         }
 
         [HttpPut("{id}")]
         public async Task<ActionResult<Location>> PutLocation(int id, [FromBody]Location location)
         {
-            if ( id != location.Id)
+            if (id != location.Id)
                 return BadRequest();
-            
-            _repo.Update(location);    
+
+            _repo.Update(location);
             await _repo.Save();
 
             return NoContent();
@@ -76,7 +70,7 @@ namespace CarRentalApp.Controllers
 
             await _repo.Patch(location, id);
 
-            await _repo.Save();            
+            await _repo.Save();
 
             return NoContent();
         }
@@ -84,16 +78,14 @@ namespace CarRentalApp.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteLocation(int id)
         {
-            var location = await _repo.GetById(id);
-            
-            if (location == null)
-                return NotFound();
+            var location = await _repo.GetLocationById(id);
 
-            _repo.Remove(location);
+            if(location == null)
+                return NotFound("location not found!");
+
             await _repo.Save();
 
             return NoContent();
-        
         }
 
         // private readonly CarRentalContext _context;

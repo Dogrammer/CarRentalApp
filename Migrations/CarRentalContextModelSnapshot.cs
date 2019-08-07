@@ -60,7 +60,7 @@ namespace CarRentalApp.Migrations
                             Brand = "Audi",
                             CarCategoryId = 4,
                             Color = "Black",
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 819, DateTimeKind.Utc).AddTicks(2838),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 859, DateTimeKind.Utc).AddTicks(9233),
                             IsDeleted = false,
                             Mileage = 10500,
                             Model = "A4",
@@ -72,7 +72,7 @@ namespace CarRentalApp.Migrations
                             Brand = "BMW",
                             CarCategoryId = 3,
                             Color = "Red",
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 819, DateTimeKind.Utc).AddTicks(4738),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 860, DateTimeKind.Utc).AddTicks(1372),
                             IsDeleted = false,
                             Mileage = 100500,
                             Model = "320d",
@@ -84,7 +84,7 @@ namespace CarRentalApp.Migrations
                             Brand = "Mazda",
                             CarCategoryId = 3,
                             Color = "Black",
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 819, DateTimeKind.Utc).AddTicks(4760),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 860, DateTimeKind.Utc).AddTicks(1394),
                             IsDeleted = false,
                             Mileage = 12500,
                             Model = "3",
@@ -96,7 +96,7 @@ namespace CarRentalApp.Migrations
                             Brand = "Audi",
                             CarCategoryId = 4,
                             Color = "Blue",
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 819, DateTimeKind.Utc).AddTicks(4760),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 860, DateTimeKind.Utc).AddTicks(1400),
                             IsDeleted = false,
                             Mileage = 25500,
                             Model = "A7",
@@ -108,7 +108,7 @@ namespace CarRentalApp.Migrations
                             Brand = "Mercedes",
                             CarCategoryId = 3,
                             Color = "Black",
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 819, DateTimeKind.Utc).AddTicks(4766),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 860, DateTimeKind.Utc).AddTicks(1400),
                             IsDeleted = false,
                             Mileage = 150000,
                             Model = "c200",
@@ -120,7 +120,7 @@ namespace CarRentalApp.Migrations
                             Brand = "Citroen",
                             CarCategoryId = 4,
                             Color = "Yellow",
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 819, DateTimeKind.Utc).AddTicks(4766),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 860, DateTimeKind.Utc).AddTicks(1400),
                             IsDeleted = false,
                             Mileage = 107500,
                             Model = "c3",
@@ -132,7 +132,7 @@ namespace CarRentalApp.Migrations
                             Brand = "Peugeot",
                             CarCategoryId = 3,
                             Color = "Red",
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 819, DateTimeKind.Utc).AddTicks(4766),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 860, DateTimeKind.Utc).AddTicks(1400),
                             IsDeleted = false,
                             Mileage = 100500,
                             Model = "307",
@@ -167,35 +167,35 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 820, DateTimeKind.Utc).AddTicks(9841),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(185),
                             IsDeleted = false,
                             Name = "van"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(319),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(640),
                             IsDeleted = false,
                             Name = "mini-van"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(325),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(646),
                             IsDeleted = false,
                             Name = "limousine"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(325),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(646),
                             IsDeleted = false,
                             Name = "hatchback"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(325),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(646),
                             IsDeleted = false,
                             Name = "coupe"
                         });
@@ -235,7 +235,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(6361),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8212),
                             IsDeleted = false,
                             Name = "Sisak",
                             Zip = "44000"
@@ -243,7 +243,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7061),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8929),
                             IsDeleted = false,
                             Name = "Zagreb",
                             Zip = "10000"
@@ -251,7 +251,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7072),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8934),
                             IsDeleted = false,
                             Name = "Velika Gorica",
                             Zip = "10410"
@@ -259,7 +259,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7072),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8940),
                             IsDeleted = false,
                             Name = "Osijek",
                             Zip = "31000"
@@ -267,7 +267,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7072),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8940),
                             IsDeleted = false,
                             Name = "Slavonski Brod",
                             Zip = "35000"
@@ -275,7 +275,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7072),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8940),
                             IsDeleted = false,
                             Name = "Rijeka",
                             Zip = "51000"
@@ -283,7 +283,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7072),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8940),
                             IsDeleted = false,
                             Name = "Varaždin",
                             Zip = "42000"
@@ -291,7 +291,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7072),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8940),
                             IsDeleted = false,
                             Name = "Krapina",
                             Zip = "49000"
@@ -299,7 +299,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7078),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8940),
                             IsDeleted = false,
                             Name = "Split",
                             Zip = "21000"
@@ -307,7 +307,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7078),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8940),
                             IsDeleted = false,
                             Name = "Dubrovnik",
                             Zip = "20000"
@@ -315,7 +315,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7078),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8946),
                             IsDeleted = false,
                             Name = "Trogir",
                             Zip = "21220"
@@ -323,7 +323,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7078),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8946),
                             IsDeleted = false,
                             Name = "Šibenik",
                             Zip = "22000"
@@ -331,7 +331,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7078),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8946),
                             IsDeleted = false,
                             Name = "Vukovar",
                             Zip = "32000"
@@ -339,7 +339,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 821, DateTimeKind.Utc).AddTicks(7078),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 862, DateTimeKind.Utc).AddTicks(8946),
                             IsDeleted = false,
                             Name = "Vinkovci",
                             Zip = "37000"
@@ -384,7 +384,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 822, DateTimeKind.Utc).AddTicks(5304),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 863, DateTimeKind.Utc).AddTicks(8293),
                             DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrivingLicenceNumber = "11111111",
                             FirstName = "Ivan",
@@ -394,7 +394,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 822, DateTimeKind.Utc).AddTicks(6607),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 863, DateTimeKind.Utc).AddTicks(9875),
                             DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrivingLicenceNumber = "22222222",
                             FirstName = "Marko",
@@ -404,7 +404,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 822, DateTimeKind.Utc).AddTicks(6624),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 863, DateTimeKind.Utc).AddTicks(9892),
                             DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrivingLicenceNumber = "33333333",
                             FirstName = "Josip",
@@ -414,7 +414,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 822, DateTimeKind.Utc).AddTicks(6624),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 863, DateTimeKind.Utc).AddTicks(9892),
                             DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrivingLicenceNumber = "44444444",
                             FirstName = "Pero",
@@ -424,7 +424,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 822, DateTimeKind.Utc).AddTicks(6624),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 863, DateTimeKind.Utc).AddTicks(9892),
                             DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrivingLicenceNumber = "55555555",
                             FirstName = "Matko",
@@ -434,7 +434,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 822, DateTimeKind.Utc).AddTicks(6624),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 863, DateTimeKind.Utc).AddTicks(9892),
                             DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrivingLicenceNumber = "88888888",
                             FirstName = "Ivica",
@@ -444,7 +444,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 822, DateTimeKind.Utc).AddTicks(6624),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 863, DateTimeKind.Utc).AddTicks(9897),
                             DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrivingLicenceNumber = "99999999",
                             FirstName = "Davor",
@@ -454,7 +454,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 822, DateTimeKind.Utc).AddTicks(6629),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 863, DateTimeKind.Utc).AddTicks(9937),
                             DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrivingLicenceNumber = "12121212",
                             FirstName = "Dario",
@@ -464,7 +464,7 @@ namespace CarRentalApp.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 822, DateTimeKind.Utc).AddTicks(6629),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 863, DateTimeKind.Utc).AddTicks(9943),
                             DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrivingLicenceNumber = "12312312",
                             FirstName = "Dorian",
@@ -502,7 +502,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 1,
                             CityId = 1,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 823, DateTimeKind.Utc).AddTicks(760),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 864, DateTimeKind.Utc).AddTicks(3941),
                             IsDeleted = false,
                             Name = "Vukovarska 4c"
                         },
@@ -510,7 +510,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 2,
                             CityId = 2,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 823, DateTimeKind.Utc).AddTicks(1328),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 864, DateTimeKind.Utc).AddTicks(4567),
                             IsDeleted = false,
                             Name = "Zagrebačka 5"
                         },
@@ -518,7 +518,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 3,
                             CityId = 4,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 823, DateTimeKind.Utc).AddTicks(1334),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 864, DateTimeKind.Utc).AddTicks(4573),
                             IsDeleted = false,
                             Name = "Petrova 5"
                         },
@@ -526,7 +526,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 4,
                             CityId = 3,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 823, DateTimeKind.Utc).AddTicks(1340),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 864, DateTimeKind.Utc).AddTicks(4573),
                             IsDeleted = false,
                             Name = "Sisačka 13"
                         },
@@ -534,7 +534,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 5,
                             CityId = 7,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 823, DateTimeKind.Utc).AddTicks(1340),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 864, DateTimeKind.Utc).AddTicks(4573),
                             IsDeleted = false,
                             Name = "Slavonska 4c"
                         },
@@ -542,7 +542,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 6,
                             CityId = 8,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 823, DateTimeKind.Utc).AddTicks(1340),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 864, DateTimeKind.Utc).AddTicks(4579),
                             IsDeleted = false,
                             Name = "Petrinjska 4c"
                         },
@@ -550,7 +550,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 7,
                             CityId = 1,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 823, DateTimeKind.Utc).AddTicks(1340),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 864, DateTimeKind.Utc).AddTicks(4579),
                             IsDeleted = false,
                             Name = "Vukovarska 15c"
                         });
@@ -603,7 +603,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 1,
                             CarId = 3,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 824, DateTimeKind.Utc).AddTicks(1051),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 865, DateTimeKind.Utc).AddTicks(5046),
                             CustomerId = 3,
                             DropOffLocationId = 3,
                             EndDate = new DateTime(2015, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -617,7 +617,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 2,
                             CarId = 3,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 824, DateTimeKind.Utc).AddTicks(3042),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 865, DateTimeKind.Utc).AddTicks(7276),
                             CustomerId = 5,
                             DropOffLocationId = 4,
                             EndDate = new DateTime(2016, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -631,7 +631,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 3,
                             CarId = 1,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 824, DateTimeKind.Utc).AddTicks(3070),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 865, DateTimeKind.Utc).AddTicks(7305),
                             CustomerId = 6,
                             DropOffLocationId = 3,
                             EndDate = new DateTime(2018, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -645,7 +645,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 4,
                             CarId = 2,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 824, DateTimeKind.Utc).AddTicks(3070),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 865, DateTimeKind.Utc).AddTicks(7305),
                             CustomerId = 2,
                             DropOffLocationId = 2,
                             EndDate = new DateTime(2019, 5, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -659,7 +659,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 5,
                             CarId = 6,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 824, DateTimeKind.Utc).AddTicks(3076),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 865, DateTimeKind.Utc).AddTicks(7311),
                             CustomerId = 2,
                             DropOffLocationId = 2,
                             EndDate = new DateTime(2019, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -673,7 +673,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 6,
                             CarId = 5,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 824, DateTimeKind.Utc).AddTicks(3076),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 865, DateTimeKind.Utc).AddTicks(7311),
                             CustomerId = 2,
                             DropOffLocationId = 2,
                             EndDate = new DateTime(2019, 10, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -687,7 +687,7 @@ namespace CarRentalApp.Migrations
                         {
                             Id = 7,
                             CarId = 4,
-                            CreatedAt = new DateTime(2019, 7, 27, 15, 23, 59, 824, DateTimeKind.Utc).AddTicks(3076),
+                            CreatedAt = new DateTime(2019, 8, 7, 10, 22, 56, 865, DateTimeKind.Utc).AddTicks(7311),
                             CustomerId = 2,
                             DropOffLocationId = 2,
                             EndDate = new DateTime(2019, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),

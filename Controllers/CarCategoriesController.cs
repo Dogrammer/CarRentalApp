@@ -14,9 +14,11 @@ namespace CarRentalApp.Controllers
     public class CarCategoriesController : ControllerBase
     {
         private readonly IRepository<CarCategory> _repo;
+        private readonly CarRentalContext _context;
 
-        public CarCategoriesController(IRepository<CarCategory> repo)
+        public CarCategoriesController(IRepository<CarCategory> repo, CarRentalContext context)
         {
+            _context = context;
             _repo = repo;
 
         }
@@ -24,6 +26,9 @@ namespace CarRentalApp.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CarCategory>>> GetCarCategories()
         {
+            // var carCategories = await _context.CarCategories.ToListAsync();
+
+            // return Ok(carCategories);
             var categories = await _repo.Get();
 
             if (categories == null)
@@ -56,7 +61,7 @@ namespace CarRentalApp.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<CarCategory>> PutCarCategory(int id, [FromBody]CarCategory carCategory)
         {
-            if ( id != carCategory.Id)
+            if (id != carCategory.Id)
                 return BadRequest();
 
             _repo.Update(carCategory);
@@ -71,7 +76,7 @@ namespace CarRentalApp.Controllers
 
             await _repo.Patch(carCategory, id);
 
-            await _repo.Save();            
+            await _repo.Save();
 
             return NoContent();
         }
@@ -79,13 +84,13 @@ namespace CarRentalApp.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCarCategory(int id)
         {
-            var category =await  _repo.GetById(id);
+            var category = await _repo.GetById(id);
 
             if (category == null)
                 return NotFound();
 
             _repo.Remove(category);
-             await _repo.Save();
+            await _repo.Save();
 
             return NoContent();
         }
