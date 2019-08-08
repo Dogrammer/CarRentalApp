@@ -11,7 +11,7 @@ namespace CarRentalApp.Data
          Task Add(T entity);
          Task<T> GetById(int id);
          Task<IEnumerable<T>> Get();
-         void Remove(T entity);
+         Task Remove(T entity);
          Task Save();
          void Update(T entity);
          Task Patch(JsonPatchDocument<T> entity, int id);

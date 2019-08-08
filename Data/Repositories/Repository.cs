@@ -36,11 +36,13 @@ namespace CarRentalApp.Data.Repositories
             return getItem;
         }
 
-        public void Remove(T entity)
+        public async Task Remove(T entity)
         {
             // var item = _context.Set<T>().Find(id);
 
               _context.Set<T>().Remove(entity);
+
+              await _context.SaveChangesAsync();
         }
 
         public async Task Save()

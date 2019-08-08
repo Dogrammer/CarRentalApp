@@ -103,8 +103,8 @@ namespace CarRentalApp.Controllers
 
             if(rental == null)
                 return NotFound("rental not found");
-
-            await _repo.Save();
+            
+            await _repo.Remove(rental);
 
             return NoContent();
         }

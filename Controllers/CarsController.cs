@@ -79,12 +79,12 @@ namespace CarRentalApp.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Car>> DeleteCar(int id)
         {
-            var car = _repo.GetCarById(id);
+            var car =  await _repo.GetCarById(id);
 
             if (car == null)
                 return NotFound();
             
-            await _repo.Save();
+           await _repo.Remove(car);
 
             return NoContent();
 

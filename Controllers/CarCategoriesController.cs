@@ -14,13 +14,10 @@ namespace CarRentalApp.Controllers
     public class CarCategoriesController : ControllerBase
     {
         private readonly IRepository<CarCategory> _repo;
-        private readonly CarRentalContext _context;
 
-        public CarCategoriesController(IRepository<CarCategory> repo, CarRentalContext context)
+        public CarCategoriesController(IRepository<CarCategory> repo)
         {
-            _context = context;
             _repo = repo;
-
         }
 
         [HttpGet]
