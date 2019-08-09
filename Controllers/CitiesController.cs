@@ -83,7 +83,7 @@ namespace CarRentalApp.Controllers
             if (city == null)
                 return NotFound();
 
-            _repo.Remove(city);
+            await _repo.Remove(city);
             await _repo.Save();
 
             return NoContent();
