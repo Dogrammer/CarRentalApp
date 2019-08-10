@@ -35,9 +35,9 @@ namespace CarRentalApp.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<CarCategory> GetCarCategory(int id)
+        public async Task<ActionResult<CarCategory>> GetCarCategory(int id)
         {
-            var category = _repo.GetById(id);
+            var category = await _repo.GetById(id);
 
             if (category == null)
                 return NotFound();
@@ -70,7 +70,6 @@ namespace CarRentalApp.Controllers
         [HttpPatch("{id}")]
         public async Task<ActionResult<City>> PatchCarCategory([FromBody]JsonPatchDocument<CarCategory> carCategory, int id)
         {
-
             await _repo.Patch(carCategory, id);
 
             await _repo.Save();
@@ -86,7 +85,7 @@ namespace CarRentalApp.Controllers
             if (category == null)
                 return NotFound();
 
-            _repo.Remove(category);
+            await _repo.Remove(category);
             await _repo.Save();
 
             return NoContent();

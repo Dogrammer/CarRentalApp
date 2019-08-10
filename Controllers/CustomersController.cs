@@ -84,7 +84,7 @@ namespace CarRentalApp.Controllers
             if (customer == null)
                 return NotFound();
 
-            _repo.Remove(customer);
+            await _repo.Remove(customer);
             await _repo.Save();
 
             return NoContent();

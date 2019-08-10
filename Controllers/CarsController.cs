@@ -68,7 +68,6 @@ namespace CarRentalApp.Controllers
         [HttpPatch("{id}")]
         public async Task<ActionResult<City>> PatchCar([FromBody]JsonPatchDocument<Car> car, int id)
         {
-
             await _repo.Patch(car, id);
 
             await _repo.Save();            
