@@ -10,7 +10,6 @@ namespace CarRentalApp.Helpers
         {
             //<source,destionation>
             CreateMap<CustomerForListDto, Customer>();
-            
         }
     }
 }

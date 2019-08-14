@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using CarRentalApp.Extensions;
 using Microsoft.AspNetCore.JsonPatch;
 using CarRentalApp.Data.Services;
+using System.ComponentModel.DataAnnotations;
 
 namespace CarRentalApp.Controllers
 {
@@ -60,7 +61,7 @@ namespace CarRentalApp.Controllers
         public async Task<ActionResult<Rental>> PostRental([FromBody]Rental rental)
         {
             if (!_service.DateValid(rental.StartDate, rental.EndDate))
-                return BadRequest("EndDate should be greater then StartDate !");
+                return BadRequest("EndDate should be greater than StartDate !");
             
             if (!_service.CarAvailable(rental))
                 return BadRequest("Car is not available!");
@@ -78,6 +79,9 @@ namespace CarRentalApp.Controllers
         {
             if (id != rental.Id || !_service.DateValid(rental.StartDate, rental.EndDate))
                 return BadRequest();
+            
+            if (!_service.CarAvailable(rental))
+                return BadRequest("Car is not available!");
 
             _repo.Update(rental);
             await _repo.Save();
@@ -107,6 +111,14 @@ namespace CarRentalApp.Controllers
             await _repo.Remove(rental);
 
             return NoContent();
+        }
+
+        // public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        // {
+        //     if (StartDate > EndDate)
+        //     {
+        //         yield return new ValidationResult("start date must be less than the end date!", new [] { "ConfirmEmail" });
+        //     }
         }
         // private readonly CarRentalContext _context;
         // public RentalsController(CarRentalContext context)
@@ -212,4 +224,3 @@ namespace CarRentalApp.Controllers
 
         // }
     }
-}

@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using CarRentalApp.Data.Repositories;
 using CarRentalApp.Extensions;
@@ -19,7 +21,6 @@ namespace CarRentalApp.Data.Services
         public bool CarAvailable(Rental rental)
         {
             return _context
-
                .Rentals
                .Where(c => rental.StartDate.InRange(c.StartDate, c.EndDate)
                       || rental.EndDate.InRange(c.StartDate, c.EndDate)

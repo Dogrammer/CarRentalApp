@@ -1,11 +1,12 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 
 namespace CarRentalApp.Models
 {
-    public class Rental : BaseModel
+    public class Rental : BaseModel, IValidatableObject
     {
 
         [Required(ErrorMessage="Polje 'pocetni datum' je obvezno polje.")]
@@ -15,6 +16,14 @@ namespace CarRentalApp.Models
         [Required(ErrorMessage="Polje 'završni datum' je obvezno polje.")]
         [DataType(DataType.DateTime,ErrorMessage="Datum je u pogrešnom formatu.")]
         public DateTime? EndDate { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (StartDate > EndDate)
+            {
+                yield return new ValidationResult("start date must be less than the end date!", new [] { "Check Dates" });
+            }
+        }
         
         public string Remarks { get; set; }
         //[JsonIgnore]
